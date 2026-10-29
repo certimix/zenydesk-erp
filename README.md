@@ -1,13 +1,7 @@
 <p align="center">
  <img width="1024" height="186" alt="image" src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b" />
 
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/aureuserp/temp-media/main/aureus-logo-dark.png">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aureuserp/temp-media/main/aureus-logo-light.png">
-      <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/aureus-logo-light.png" alt="AureusERP logo">
-    </picture>
-  </a>  
-</p>
+    
 
 <p align="center">
 <a href="https://packagist.org/packages/aureuserp/aureuserp"><img src="https://poser.pugx.org/aureuserp/aureuserp/d/total.svg" alt="Total Downloads"></a>
@@ -15,7 +9,7 @@
 <a href="https://packagist.org/packages/aureuserp/aureuserp"><img src="https://poser.pugx.org/aureuserp/aureuserp/license.svg" alt="License"></a>
 </p>
 
-<h1 align="center">Aureus ERP</h1>
+<h1 align="center">Zenydesk-ERP</h1>
 
 <p align="center">
   <strong>Open-Source Enterprise Resource Planning for Modern Businesses</strong>
@@ -31,7 +25,7 @@
 
 1. [Introduction](#-introduction)
 2. [Key Features](#-key-features)
-3. [Why Choose Aureus ERP?](#-why-choose-aureus-erp)
+3. [Why Choose Zenydesk-ERP?](#-why-choose-aureus-erp)
 4. [Requirements](#-requirements)
 5. [Quick Start](#-quick-start)
 6. [Plugin System](#-plugin-system)
@@ -45,12 +39,12 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/introduction.png" alt="AureusERP Introduction" width="100%">
+   <img width="1024" height="186" alt="image" src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b" />
 </p>
 
 ## 🚀 Introduction
 
-Aureus ERP is a comprehensive, open-source Enterprise Resource Planning (ERP) solution designed for Small and Medium Enterprises (SMEs) and large-scale organizations. Built on **[Laravel 13](https://laravel.com)**, the most popular PHP framework, and **[FilamentPHP 5](https://filamentphp.com)**, a cutting-edge admin panel framework, Aureus ERP offers an extensible and developer-friendly platform for managing every aspect of your business operations.
+Zenydesk-ERP is a comprehensive, open-source Enterprise Resource Planning (ERP) solution designed for Small and Medium Enterprises (SMEs) and large-scale organizations. Built on **[Laravel 13](https://laravel.com)**, the most popular PHP framework, and **[FilamentPHP 5](https://filamentphp.com)**, a cutting-edge admin panel framework, Aureus ERP offers an extensible and developer-friendly platform for managing every aspect of your business operations.
 
 Whether you're managing accounting, inventory, HR, CRM, or projects, Aureus ERP provides a modular approach that grows with your business.
 
@@ -62,56 +56,56 @@ Whether you're managing accounting, inventory, HR, CRM, or projects, Aureus ERP 
   Built with Laravel 13 and FilamentPHP 5 for maximum performance and developer experience.
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/mordern-architecture.png" alt="Modern Architecture" width="100%">
+ <img width="1024" height="186" alt="image" src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b" />
   </p>
 
   ### 🧩 Modular Plugin System
   Install only the features you need - from accounting to project management.
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/modular-plugin-system.png" alt="Modular Plugin System" width="100%">
+    <img width="1024" height="186" alt="image" src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b" />
   </p>
 
   ### 🎨 Beautiful UI/UX
   Responsive design with TailwindCSS 4, optimized for desktop and mobile.
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/mordern-ui-responsive-design.png" alt="Beautiful UI/UX" width="100%">
+     <img width="1024" height="186" alt="image" src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b" />alt="Beautiful UI/UX" width="100%">
   </p>
 
   ### 🔐 Advanced Security
   Role-based access control with Filament Shield integration.
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/advanced-security.png" alt="Advanced Security" width="100%">
+    <img src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b" alt="Advanced Security" width="100%">
   </p>
 
   ### 📊 Business Intelligence
   Built-in analytics and reporting tools.
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/business-intelligence.png" alt="Business Intelligence" width="100%">
+    <img src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b" alt="Business Intelligence" width="100%">
   </p>
 
   ### 🌐 Multi-Language Support
   Easily translate and localize for global businesses.
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/multi-language-support.png" alt="Multi-Language Support" width="100%">
+    <img src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b" alt="Multi-Language Support" width="100%">
   </p>
 
   ### ⚡ High Performance
   Optimized database queries and caching strategies.
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/high-performance.png" alt="High Performance" width="100%">
+    <img src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b" alt="High Performance" width="100%">
   </p>
 
   ### 🔧 Developer-Friendly
   Clean code, comprehensive documentation, and extensive APIs.
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/developer-friendly.png" alt="Developer-Friendly" width="100%">
+    <img src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b"alt="Developer-Friendly" width="100%">
   </p>
 
   ### 🔄 Real-Time Updates
