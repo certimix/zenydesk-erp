@@ -1,5 +1,6 @@
 <p align="center">
-  <a href="https://aureuserp.com">
+ <img width="1024" height="186" alt="image" src="https://github.com/user-attachments/assets/e7b929eb-a29f-48c2-acdc-7f06138cba1b" />
+
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/aureuserp/temp-media/main/aureus-logo-dark.png">
       <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aureuserp/temp-media/main/aureus-logo-light.png">
