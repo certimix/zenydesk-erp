@@ -67,54 +67,36 @@ Whether you're managing accounting, inventory, HR, CRM, or projects, ZenyDesk ER
     <img src="art/modular-plugin-system.png" alt="Modular Plugin System" width="100%">
   </p>
 
-  ### 🎨 Beautiful UI/UX
-  Responsive design with TailwindCSS 4, optimized for desktop and mobile.
-
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/zenydesk-erp/temp-media/main/mordern-ui-responsive-design.png" alt="Beautiful UI/UX" width="100%">
-  </p>
+    ### 🎨 Beautiful UI/UX
+  - **Modern Interface:** Sleek, responsive layout built with Tailwind CSS and FilamentPHP.
+  - **Mobile Optimized:** Full administrative capability across desktops, tablets, and smartphones.
+  - **Theme Adaptability:** Executive dark theme and accessible high-contrast light mode.
 
   ### 🔐 Advanced Security
-  Role-based access control with Filament Shield integration.
-
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/zenydesk-erp/temp-media/main/advanced-security.png" alt="Advanced Security" width="100%">
-  </p>
+  - **Role-Based Access Control:** Granular permission management integrated with Filament Shield.
+  - **Multi-Tenant Isolation:** Complete data separation for sovereign enterprise environments.
+  - **Session Guard:** Hardened authentication protection and automated session lifecycle control.
 
   ### 📊 Business Intelligence
-  Built-in analytics and reporting tools.
-
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/zenydesk-erp/temp-media/main/business-intelligence.png" alt="Business Intelligence" width="100%">
-  </p>
+  - **Real-Time Dashboards:** Interactive financial summaries, operational charts, and executive KPIs.
+  - **Custom Reports:** Exportable statement reports (PDF, Excel, CSV) customized for business leadership.
+  - **Audit Logs:** Comprehensive activity tracking for compliance and operational transparency.
 
   ### 🌐 Multi-Language Support
-  Easily translate and localize for global businesses.
-
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/zenydesk-erp/temp-media/main/multi-language-support.png" alt="Multi-Language Support" width="100%">
-  </p>
+  - **Global & Local:** Native support for Portuguese (Brasil), English, Spanish, French, and Arabic.
+  - **Automatic Locale Detection:** Intelligent browser-level language detection with user overrides.
 
   ### ⚡ High Performance
-  Optimized database queries and caching strategies.
-
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/zenydesk-erp/temp-media/main/high-performance.png" alt="High Performance" width="100%">
-  </p>
+  - **Engineered on PHP 8.3+:** Low-latency execution, OPcache acceleration, and optimized Eloquent queries.
+  - **Redis & In-Memory Caching:** Instant response times under high-concurrency enterprise workloads.
 
   ### 🔧 Developer-Friendly
-  Clean code, comprehensive documentation, and extensive APIs.
-
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/zenydesk-erp/temp-media/main/developer-friendly.png" alt="Developer-Friendly" width="100%">
-  </p>
+  - **Clean Architecture:** Domain-driven modular design following strict Laravel standards.
+  - **Extensible Hooks:** Custom lifecycle hooks, Filament schemas, and open REST endpoints.
 
   ### 🔄 Real-Time Updates
-  LiveWire 4 integration for dynamic interfaces.
-
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/zenydesk-erp/temp-media/main/real-time-updates.png" alt="Real-Time Updates" width="100%">
-  </p>
+  - **LiveWire Integration:** Dynamic reactive UI updates without page reloads.
+  - **Event-Driven:** Webhooks and real-time operational notifications for sales, stock, and invoices.
 
 ---
 
@@ -416,7 +398,7 @@ Security is a top priority for ZenyDesk ERP. We take all security vulnerabilitie
 
 If you discover a security vulnerability in ZenyDesk ERP, please report it responsibly:
 
-📧 **Email:** support@webkul.com
+📧 **Email:** suporte@zenydesk.com
 
 ### What to Include
 - Description of the vulnerability
@@ -439,7 +421,7 @@ Need help or want to connect with other ZenyDesk ERP users?
 ### 🤝 Get Support
 - 💬 **Community Forum:** [Coming Soon] - Connect with other users and share experiences
 - 🐛 **Issue Tracker:** [GitHub Issues](https://github.com/certimix/zenydesk-erp/issues) - Report bugs and request features
-- 📧 **Email Support:** support@webkul.com - Direct support from the team
+- 📧 **Email Support:** suporte@zenydesk.com - Direct support from the team
 
 ### 🔔 Stay Updated
 - ⭐ **Star** this repository to show your support
@@ -450,7 +432,7 @@ Need help or want to connect with other ZenyDesk ERP users?
 
 <div align="center">
 
-Made with ❤️ by [Webkul](https://webkul.com)
+Made with ❤️ by [ZenyDesk](https://zenydesk.com)
 
 [⬆ Back to Top](#-table-of-contents)
 
