@@ -4,6 +4,7 @@ namespace App\Providers\Filament;
 
 use App\Http\Middleware\ApplyBrandSettings;
 use App\Http\Middleware\SetLocale;
+use App\Http\Middleware\TenantModuleAccessMiddleware;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Actions\Action;
 use Filament\Auth\MultiFactor\App\AppAuthentication;
@@ -108,6 +109,7 @@ class AdminPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
                 SetLocale::class,
                 ApplyBrandSettings::class,
+                TenantModuleAccessMiddleware::class,
             ])
             ->renderHook(
                 \Filament\View\PanelsRenderHook::BODY_END,
