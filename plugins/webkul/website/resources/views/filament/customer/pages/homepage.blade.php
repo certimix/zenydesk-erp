@@ -9,19 +9,19 @@
             {!! str($rawContent)->sanitizeHtml() !!}
         </div>
     @else
-        <!-- Estilos Dedicados Garantidos para o Portal ZenyDesk ERP com MagnetLines Background -->
+        <!-- Estilos Dedicados Garantidos para o Portal ZenyDesk ERP com MagnetLines em Fundo Branco -->
         <style>
             .zd-hero-wrapper {
                 position: relative;
                 width: 100%;
                 min-height: 520px;
-                background-color: #0a0e17;
+                background-color: #ffffff !important;
                 border-radius: 24px;
                 padding: 56px 24px 48px 24px;
                 margin-bottom: 36px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
+                border: 1px solid #e2e8f0;
                 overflow: hidden;
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -29,7 +29,7 @@
                 text-align: center;
             }
 
-            /* MagnetLines CSS Oficial React Bits */
+            /* MagnetLines CSS Oficial React Bits em Fundo Branco */
             .magnet-lines {
                 position: absolute;
                 inset: 0;
@@ -69,14 +69,14 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 8px;
-                padding: 6px 16px;
+                padding: 6px 18px;
                 border-radius: 9999px;
                 font-size: 13px;
                 font-weight: 600;
-                color: #e0e7ff !important;
-                background-color: rgba(21, 93, 252, 0.22) !important;
-                border: 1px solid rgba(147, 197, 253, 0.35);
-                backdrop-filter: blur(8px);
+                color: #1d4ed8 !important;
+                background-color: #eff6ff !important;
+                border: 1px solid #bfdbfe;
+                box-shadow: 0 1px 3px rgba(29, 78, 216, 0.08);
                 margin-bottom: 24px;
             }
 
@@ -84,10 +84,9 @@
                 font-size: 38px;
                 font-weight: 900;
                 line-height: 1.15;
-                color: #ffffff !important;
+                color: #0f172a !important;
                 letter-spacing: -0.03em;
                 margin-bottom: 16px;
-                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
             }
             @media (min-width: 640px) {
                 .zd-hero-title {
@@ -103,10 +102,9 @@
             .zd-hero-subtitle {
                 font-size: 16px;
                 line-height: 1.65;
-                color: #cbd5e1 !important;
+                color: #475569 !important;
                 max-width: 700px;
                 margin: 0 auto 32px auto;
-                text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
             }
             @media (min-width: 640px) {
                 .zd-hero-subtitle {
@@ -126,14 +124,14 @@
                 background-color: #155dfc !important;
                 border-radius: 12px;
                 text-decoration: none !important;
-                box-shadow: 0 4px 20px rgba(21, 93, 252, 0.5);
+                box-shadow: 0 4px 18px rgba(21, 93, 252, 0.35);
                 transition: all 0.2s ease;
                 cursor: pointer;
             }
             .zd-btn-primary:hover {
                 background-color: #0c4ad4 !important;
                 transform: translateY(-2px);
-                box-shadow: 0 8px 28px rgba(21, 93, 252, 0.7);
+                box-shadow: 0 6px 22px rgba(21, 93, 252, 0.45);
             }
 
             .zd-btn-secondary {
@@ -144,28 +142,29 @@
                 padding: 15px 28px;
                 font-size: 15px;
                 font-weight: 600;
-                color: #ffffff !important;
-                background-color: rgba(255, 255, 255, 0.08) !important;
-                border: 1px solid rgba(255, 255, 255, 0.25) !important;
+                color: #0f172a !important;
+                background-color: #ffffff !important;
+                border: 1px solid #cbd5e1 !important;
                 border-radius: 12px;
                 text-decoration: none !important;
-                backdrop-filter: blur(8px);
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
                 transition: all 0.2s ease;
                 cursor: pointer;
             }
             .zd-btn-secondary:hover {
-                background-color: rgba(255, 255, 255, 0.16) !important;
-                border-color: rgba(255, 255, 255, 0.45) !important;
+                background-color: #f8fafc !important;
+                border-color: #94a3b8 !important;
                 transform: translateY(-2px);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
             }
 
             .zd-trust-card {
-                background: rgba(255, 255, 255, 0.05);
-                border: 1px solid rgba(255, 255, 255, 0.1);
+                background: #f8fafc;
+                border: 1px solid #e2e8f0;
                 border-radius: 14px;
                 padding: 14px 18px;
                 text-align: center;
-                backdrop-filter: blur(6px);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
             }
 
             .zd-feature-card {
@@ -194,7 +193,7 @@
             }
 
             .zd-pricing-banner {
-                background: linear-gradient(135deg, #090d16 0%, #152445 100%);
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
                 border-radius: 20px;
                 padding: 40px 32px;
                 color: #ffffff;
@@ -204,12 +203,12 @@
                 text-align: center;
                 margin-top: 32px;
                 margin-bottom: 24px;
-                box-shadow: 0 10px 30px rgba(9, 13, 22, 0.3);
+                box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
             }
         </style>
 
         <div class="max-w-6xl mx-auto px-2 sm:px-4">
-            <!-- 1. Hero Section com MagnetLines Exclusivo no Fundo -->
+            <!-- 1. Hero Section com MagnetLines Exclusivo no Fundo Branco -->
             <div class="zd-hero-wrapper text-center">
                 <!-- Container Oficial do MagnetLines (React Bits WebGL2) -->
                 <div id="zd-magnet-lines" class="magnet-lines"></div>
@@ -217,13 +216,13 @@
                 <div class="zd-hero-content">
                     <!-- Selo de Garantia e Infraestrutura -->
                     <div class="zd-badge-pill">
-                        <svg class="w-4 h-4 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                         </svg>
                         <span>Infraestrutura Própria no Brasil • Multi-Tenant com Isolamento Total</span>
                     </div>
 
-                    <!-- Título Principal de Alto Impacto e Clareza Absoluta -->
+                    <!-- Título Principal com Legibilidade Máxima em Fundo Branco -->
                     <h1 class="zd-hero-title">
                         Gestão Empresarial Integrada e Inteligente
                     </h1>
@@ -251,22 +250,22 @@
                     </div>
 
                     <!-- 4 Indicadores de Confiança Técnica -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto pt-4 border-t border-slate-700/60">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto pt-4 border-t border-slate-200">
                         <div class="zd-trust-card">
-                            <div class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-1">Provisionamento</div>
-                            <div class="text-sm font-semibold text-white">Ativação em &lt; 2s</div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-1">Provisionamento</div>
+                            <div class="text-sm font-bold text-slate-800">Ativação em &lt; 2s</div>
                         </div>
                         <div class="zd-trust-card">
-                            <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1">Isolamento</div>
-                            <div class="text-sm font-semibold text-white">Subdomínio Próprio</div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-emerald-600 mb-1">Isolamento</div>
+                            <div class="text-sm font-bold text-slate-800">Subdomínio Próprio</div>
                         </div>
                         <div class="zd-trust-card">
-                            <div class="text-xs font-bold uppercase tracking-wider text-purple-300 mb-1">Soberania</div>
-                            <div class="text-sm font-semibold text-white">Banco Dedicado</div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-purple-600 mb-1">Soberania</div>
+                            <div class="text-sm font-bold text-slate-800">Banco Dedicado</div>
                         </div>
                         <div class="zd-trust-card">
-                            <div class="text-xs font-bold uppercase tracking-wider text-cyan-300 mb-1">Disponibilidade</div>
-                            <div class="text-sm font-semibold text-white">SLA 99.9% em Nuvem</div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-cyan-600 mb-1">Disponibilidade</div>
+                            <div class="text-sm font-bold text-slate-800">SLA 99.9% em Nuvem</div>
                         </div>
                     </div>
                 </div>
@@ -389,21 +388,22 @@
             </div>
         </div>
 
-        <!-- Script de Inicialização Oficial do MagnetLines -->
+        <!-- Script de Inicialização Oficial do MagnetLines em Fundo Branco -->
         <script src="{{ asset('js/magnet-lines.js') }}?v={{ file_exists(public_path('js/magnet-lines.js')) ? filemtime(public_path('js/magnet-lines.js')) : time() }}"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var container = document.getElementById('zd-magnet-lines');
                 if (container && window.initMagnetLines) {
                     window.initMagnetLines(container, {
-                        lineColor: '#efefef',
+                        lineColor: '#cbd5e1',
+                        accentColor: '#155dfc',
                         spacing: 30,
                         lineWidth: 2,
                         lineHeight: 18,
                         mode: 'orbit',
                         shape: 'line',
                         radius: 200,
-                        fade: 0.65,
+                        fade: 0.5,
                         baseAngle: -10,
                         edgeFade: 0,
                         stretch: 0.4,
