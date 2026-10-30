@@ -29,12 +29,12 @@ class CustomerPanelProvider extends PanelProvider
             ->homeUrl(url('/'))
             ->authPasswordBroker('customers')
             ->profile(isSimple: false)
-            ->favicon(asset('images/favicon.ico'))
-            ->brandLogo(asset('images/logo.svg'))
+            ->favicon(asset('favicon.ico'))
+            ->brandLogo(asset('images/zenydesk-erp-logo.png'))
             ->darkMode(false)
             ->theme(asset('css/filament/customer/theme.css').'?v='.filemtime(public_path('css/filament/customer/theme.css')))
             ->simplePageMaxContentWidth(Width::Small)
-            ->brandLogoHeight('2rem')
+            ->brandLogoHeight('2.4rem')
             ->colors([
                 'primary' => Color::Blue,
             ])

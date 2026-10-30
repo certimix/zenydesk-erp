@@ -113,10 +113,17 @@ class ApplyBrandSettings
         }
 
         if (Storage::disk('public')->exists($path)) {
-            return Storage::disk('public')->url($path);
+            $url = Storage::disk('public')->url($path);
+        } else {
+            $url = asset($path);
         }
 
-        return asset($path);
+        $fullPath = public_path(ltrim($path, '/'));
+        if (file_exists($fullPath)) {
+            $url .= (str_contains($url, '?') ? '&' : '?') . 'v=' . filemtime($fullPath);
+        }
+
+        return $url;
     }
 
     protected function isSameColor(string $a, string $b): bool

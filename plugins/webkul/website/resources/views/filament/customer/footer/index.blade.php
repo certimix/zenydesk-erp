@@ -1,96 +1,135 @@
-<footer class="px-6 py-12 bg-linear-to-r from-primary-50 via-primary-50/40 to-primary-100" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">
-	<div class="container max-w-6xl mx-auto">
-		<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-			<!-- Logo and Description Column -->
-			<div class="md:col-span-1">
-				<div class="mb-6">
-					<a href="{{ url('/') }}">
-						<x-filament-panels::logo />
+<footer style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; padding: 48px 24px 32px 24px;" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">
+	<div style="max-width: 1152px; margin: 0 auto;">
+		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 36px; margin-bottom: 40px;">
+			<!-- Coluna 1: Logo e Descrição Institucional -->
+			<div>
+				<div style="margin-bottom: 18px;">
+					<a href="{{ url('/') }}" style="display: inline-block;">
+						<img
+							src="{{ asset('images/zenydesk-erp-logo.png') }}?v={{ filemtime(public_path('images/zenydesk-erp-logo.png')) }}"
+							alt="ZenyDesk ERP"
+							style="height: 36px; width: auto; object-fit: contain;"
+						/>
 					</a>
 				</div>
 
-				<p class="mb-4 text-gray-700 {{ app()->getLocale() === 'ar' ? 'text-right' : 'text-left' }}">
-					{{ __('website::filament/app.footer.description') }}
+				<p style="margin-bottom: 12px; color: #475569; font-size: 14px; line-height: 1.6;">
+					Projetado para otimizar e simplificar as operações do negócio, o ZenyDesk ERP é adequado para empresas de todos os portes.
 				</p>
 
-				<p class="text-gray-700 {{ app()->getLocale() === 'ar' ? 'text-right' : 'text-left' }}">
-					{{ __('website::filament/app.footer.description_2') }}
+				<p style="color: #475569; font-size: 14px; line-height: 1.6;">
+					A plataforma enfatiza relatórios para insights, segurança, flexibilidade de localização e integração com CRMs, ferramentas de BI e APIs.
 				</p>
 			</div>
 
-			<!-- Useful Links Column -->
-			<div class="md:col-span-1">
-				<h3 class="mb-4 text-lg font-medium {{ app()->getLocale() === 'ar' ? 'text-right' : 'text-left' }}">{{ __('website::filament/app.footer.useful_links') }}</h3>
+			<!-- Coluna 2: Links Úteis Operacionais -->
+			<div>
+				<h3 style="margin-bottom: 16px; font-size: 16px; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.05em;">
+					Links úteis
+				</h3>
 
-				<ul class="space-y-2 {{ app()->getLocale() === 'ar' ? 'text-right' : 'text-left' }}">
-					@foreach ($navigationItems as $item)
-						<li>
-							<a href="{{ $item->getUrl() }}" class="text-gray-700 hover:text-primary-600">
-								{{ $item->getLabel() }}
-							</a>
-						</li>
-					@endforeach
+				<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+					<li>
+						<a href="{{ url('/') }}" style="color: #475569; font-size: 14px; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#155dfc'" onmouseout="this.style.color='#475569'">
+							Início
+						</a>
+					</li>
+					<li>
+						<a href="{{ url('/pages/about-us') }}" style="color: #475569; font-size: 14px; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#155dfc'" onmouseout="this.style.color='#475569'">
+							Sobre nós
+						</a>
+					</li>
+					<li>
+						<a href="{{ url('/pages/privacy-policy') }}" style="color: #475569; font-size: 14px; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#155dfc'" onmouseout="this.style.color='#475569'">
+							Política de Privacidade
+						</a>
+					</li>
+					<li>
+						<a href="{{ url('/pages/terms-conditions') }}" style="color: #475569; font-size: 14px; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#155dfc'" onmouseout="this.style.color='#475569'">
+							Termos e condições
+						</a>
+					</li>
+					<li style="margin-top: 4px; padding-top: 8px; border-top: 1px dashed #cbd5e1;">
+						<a href="{{ url('/assinar') }}" style="color: #155dfc !important; font-size: 14px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+							<span>Planos & Assinatura</span>
+							<svg style="width: 14px; height: 14px; fill: none; stroke: currentColor;" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+						</a>
+					</li>
 				</ul>
 			</div>
 
-			<!-- Contact and Social Media Column -->
-			<div class="md:col-span-1">
-				@if (isset($contacts['email']) || isset($contacts['phone']))
-					<h3 class="mb-4 text-lg font-medium {{ app()->getLocale() === 'ar' ? 'text-right' : 'text-left' }}">{{ __('website::filament/app.footer.contact_us') }}</h3>
+			<!-- Coluna 3: Fale Conosco, WhatsApp & Botão Assinar -->
+			<div>
+				<h3 style="margin-bottom: 16px; font-size: 16px; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.05em;">
+					Fale Conosco
+				</h3>
 
-					@if (isset($contacts['email']))
-						<div class="mb-2">
-							<a href="mailto:{{ $contacts['email'] }}" class="flex items-center text-gray-700 hover:text-primary-600 {{ app()->getLocale() === 'ar' ? 'flex-row-reverse justify-end' : '' }}">
-								<x-filament::icon
-									icon="heroicon-m-envelope"
-									class="w-5 h-5 {{ app()->getLocale() === 'ar' ? 'ml-2' : 'mr-2' }}"
-								/>
+				<div style="margin-bottom: 12px;">
+					<a href="mailto:suporte@zenydesk.com" style="display: flex; align-items: center; gap: 8px; color: #334155; font-size: 14px; text-decoration: none;" onmouseover="this.style.color='#155dfc'" onmouseout="this.style.color='#334155'">
+						<svg style="width: 18px; height: 18px; color: #155dfc; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+						</svg>
+						<span style="font-weight: 500;">suporte@zenydesk.com</span>
+					</a>
+				</div>
 
-								{{ $contacts['email'] }}
-							</a>
-						</div>
-					@endif
+				<div style="margin-bottom: 20px;">
+					<a href="tel:+557598626311" style="display: flex; align-items: center; gap: 8px; color: #334155; font-size: 14px; text-decoration: none;" onmouseover="this.style.color='#155dfc'" onmouseout="this.style.color='#334155'">
+						<svg style="width: 18px; height: 18px; color: #155dfc; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+						</svg>
+						<span style="font-weight: 500;">+55 75 9862-6311</span>
+					</a>
+				</div>
 
-					@if (isset($contacts['phone']))
-						<div class="mb-6">
-							<a href="tel:{{ $contacts['phone'] }}" class="flex items-center text-gray-700 hover:text-primary-600 {{ app()->getLocale() === 'ar' ? 'flex-row-reverse justify-end' : '' }}">
-								<x-filament::icon
-									icon="heroicon-m-phone"
-									class="w-5 h-5 {{ app()->getLocale() === 'ar' ? 'ml-2' : 'mr-2' }}"
-								/>
+				<!-- Atendimento via WhatsApp -->
+				<h4 style="margin-bottom: 10px; font-size: 14px; font-weight: 700; color: #0f172a;">
+					Atendimento via WhatsApp
+				</h4>
 
-								{{ $contacts['phone'] }}
-							</a>
-						</div>
-					@endif
-				@endif
+				<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+					<a
+						href="https://wa.me/557598626311"
+						target="_blank"
+						rel="noopener noreferrer"
+						style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; background-color: #25D366; border-radius: 50%; color: #ffffff; text-decoration: none; box-shadow: 0 2px 6px rgba(37, 211, 102, 0.4); transition: transform 0.2s;"
+						onmouseover="this.style.transform='scale(1.08)'"
+						onmouseout="this.style.transform='none'"
+						title="Conversar no WhatsApp"
+					>
+						<svg style="width: 24px; height: 24px; fill: currentColor;" viewBox="0 0 24 24">
+							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+						</svg>
+					</a>
+					<span style="font-size: 14px; font-weight: 600; color: #1e293b;">
+						+55 75 9862-6311
+					</span>
+				</div>
 
-				@if (! $socialLinks->isEmpty())
-					<h3 class="mb-4 text-lg font-medium {{ app()->getLocale() === 'ar' ? 'text-right' : 'text-left' }}">{{ __('website::filament/app.footer.follow_us') }}</h3>
-
-					<div class="flex flex-wrap gap-2 {{ app()->getLocale() === 'ar' ? 'justify-end' : 'justify-start' }}">
-						@foreach ($socialLinks as $item)
-							<a
-								href="{{ $item->getUrl() }}"
-								class="p-2 text-white bg-gray-800 rounded-full hover:bg-primary-600"
-								target="_blank"
-							>
-								{!! $item->getIcon() !!}
-							</a>
-						@endforeach
-					</div>
-				@endif
+				<!-- Botão Principal de Assinatura no Rodapé (100% Visível) -->
+				<div>
+					<a
+						href="https://erp.zenydesk.com/assinar"
+						style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 13px 24px; font-size: 14px; font-weight: 700; color: #ffffff !important; background-color: #155dfc !important; border-radius: 10px; text-decoration: none !important; box-shadow: 0 4px 12px rgba(21, 93, 252, 0.35); transition: all 0.2s ease; cursor: pointer;"
+						onmouseover="this.style.backgroundColor='#0c4ad4'; this.style.transform='translateY(-1px)'"
+						onmouseout="this.style.backgroundColor='#155dfc'; this.style.transform='none'"
+					>
+						<span>Assinar ZenyDesk ERP</span>
+						<svg style="width: 16px; height: 16px; fill: none; stroke: currentColor;" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+						</svg>
+					</a>
+				</div>
 			</div>
 		</div>
 
-		<!-- Copyright Section -->
-		<div class="flex flex-col justify-between pt-8 mt-8 border-t border-gray-200 md:flex-row {{ app()->getLocale() === 'ar' ? 'md:flex-row-reverse' : '' }}">
-			<div class="text-sm text-gray-600">
-				{{ __('website::filament/app.footer.copyright') }} © <a href="https://erp.zenydesk.com/" class="text-primary-500" target="_blank">ZenyDesk ERP</a>
+		<!-- Faixa Inferior de Direitos e Desenvolvedor -->
+		<div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid #e2e8f0; font-size: 13px; color: #64748b; gap: 8px;">
+			<div>
+				Direitos autorais © ZenyDesk ERP — Todos os direitos reservados.
 			</div>
-
-			<div class="mt-2 text-sm text-gray-600 md:mt-0">
-				{{ __('website::filament/app.footer.powered_by') }} : <a href="https://webkul.com/" class="text-primary-500" target="_blank">Webkul Software</a>
+			<div>
+				Desenvolvido por : <a href="https://zenydesk.com/" style="color: #155dfc; font-weight: 700; text-decoration: none;" target="_blank" rel="noopener noreferrer" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">ZenyDesk ERP</a>
 			</div>
 		</div>
 	</div>

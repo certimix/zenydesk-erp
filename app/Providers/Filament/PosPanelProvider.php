@@ -34,9 +34,9 @@ class PosPanelProvider extends PanelProvider
             ->id('pos')
             ->path('pos')
             ->login()
-            ->favicon(asset('images/favicon.ico'))
-            ->brandLogo(asset('images/logo.svg'))
-            ->brandLogoHeight('2rem')
+            ->favicon(asset('favicon.ico'))
+            ->brandLogo(asset('images/zenydesk-erp-logo.png'))
+            ->brandLogoHeight('2.4rem')
             ->colors([
                 'primary' => Color::Blue,
             ])

@@ -116,16 +116,17 @@ class SubscriptionController extends Controller
         $telefoneRaw = preg_replace('/\D/', '', $request->input('telefone'));
 
         // 1. Cria ou localiza cliente no Asaas
-        $customerId = $this->getOrCreateAsaasCustomer($endpoint, $apiKey, [
+        $custResult = $this->getOrCreateAsaasCustomer($endpoint, $apiKey, [
             'name'        => $request->input('nome_empresa'),
             'email'       => $request->input('email'),
             'cpfCnpj'     => $cpfCnpjRaw,
             'mobilePhone' => $telefoneRaw,
         ]);
 
-        if (! $customerId) {
-            return response()->json(['success' => false, 'error' => 'Falha ao registrar cliente junto ao gateway de pagamento bancário.']);
+        if (empty($custResult['id'])) {
+            return response()->json(['success' => false, 'error' => $custResult['error'] ?? 'Falha ao registrar cliente junto ao gateway de pagamento bancário.']);
         }
+        $customerId = $custResult['id'];
 
         // Split oficial: 45% Dev / 55% Dono
         $splitArray = [];
@@ -186,15 +187,11 @@ class SubscriptionController extends Controller
             return response()->json([
                 'success'           => true,
                 'type'              => 'PIX',
-                'payment_method'    => 'PIX',
                 'qrCodeImage'       => $pixData['encodedImage'] ?? null,
-                'pix_qrcode_image'  => $pixData['encodedImage'] ?? null,
                 'copiaECola'        => $pixData['payload'] ?? null,
-                'pix_copia_cola'    => $pixData['payload'] ?? null,
                 'valor'             => number_format($valorTotal, 2, ',', '.'),
                 'subdominio'        => $sub,
                 'urlDestino'        => "https://{$sub}.erp.zenydesk.com/admin",
-                'redirect_url'      => "https://{$sub}.erp.zenydesk.com/admin",
             ]);
         }
 
@@ -291,10 +288,9 @@ class SubscriptionController extends Controller
         }
 
         return response()->json([
-            'found'        => true,
-            'status'       => $tenant->status,
-            'redirectUrl'  => "https://{$subdominio}.erp.zenydesk.com/admin",
-            'redirect_url' => "https://{$subdominio}.erp.zenydesk.com/admin",
+            'found'      => true,
+            'status'     => $tenant->status,
+            'redirectUrl'=> "https://{$subdominio}.erp.zenydesk.com/admin",
         ]);
     }
 
@@ -360,17 +356,22 @@ class SubscriptionController extends Controller
         Log::info("Tenant [{$sub}] provisionado com sucesso para a empresa '{$empresa}' (User: {$email})");
     }
 
-    protected function getOrCreateAsaasCustomer(string $endpoint, string $apiKey, array $data): ?string
+    protected function getOrCreateAsaasCustomer(string $endpoint, string $apiKey, array $data): array
     {
         $cpfCnpj = urlencode($data['cpfCnpj']);
         $search = $this->callAsaas("{$endpoint}/customers?cpfCnpj={$cpfCnpj}", $apiKey, 'GET');
 
         if (! empty($search['data'][0]['id'])) {
-            return $search['data'][0]['id'];
+            return ['id' => $search['data'][0]['id'], 'error' => null];
         }
 
         $create = $this->callAsaas("{$endpoint}/customers", $apiKey, 'POST', $data);
-        return $create['id'] ?? null;
+        if (! empty($create['id'])) {
+            return ['id' => $create['id'], 'error' => null];
+        }
+
+        $errorMsg = $create['errors'][0]['description'] ?? 'Falha ao registrar cliente junto ao gateway de pagamento bancário.';
+        return ['id' => null, 'error' => $errorMsg];
     }
 
     protected function callAsaas(string $url, string $apiKey, string $method = 'GET', array $payload = []): array
