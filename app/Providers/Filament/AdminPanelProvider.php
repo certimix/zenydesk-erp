@@ -109,6 +109,10 @@ class AdminPanelProvider extends PanelProvider
                 SetLocale::class,
                 ApplyBrandSettings::class,
             ])
+            ->renderHook(
+                \Filament\View\PanelsRenderHook::BODY_END,
+                fn () => view('filament.components.zerp-chat-widget')
+            )
             ->authMiddleware([
                 Authenticate::class,
             ])
