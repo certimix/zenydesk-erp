@@ -25,6 +25,12 @@ return Application::configure(basePath: dirname(__DIR__))
             SetLocale::class,
         ]);
 
+        $middleware->validateCsrfTokens(except: [
+            'api/*',
+            'api/webhook/asaas',
+            'assinar/checkout',
+        ]);
+
         $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions) {

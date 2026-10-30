@@ -43,16 +43,12 @@ class PluginInfolist
                                 ->trueColor('success')
                                 ->falseColor('gray'),
 
-                            TextEntry::make('author')
-                                ->label(__('plugin-manager::filament/resources/plugin.infolist.author'))
-                                ->badge(),
+                            TextEntry::make('license')
+                                ->label(__('plugin-manager::filament/resources/plugin.infolist.license'))
+                                ->default('MIT')
+                                ->badge()
+                                ->color('success'),
                         ]),
-
-                    TextEntry::make('license')
-                        ->label(__('plugin-manager::filament/resources/plugin.infolist.license'))
-                        ->default('MIT')
-                        ->badge()
-                        ->color('success'),
 
                     TextEntry::make('summary')
                         ->label(__('plugin-manager::filament/resources/plugin.infolist.summary'))

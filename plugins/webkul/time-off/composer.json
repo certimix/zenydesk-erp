@@ -3,8 +3,8 @@
     "description": "Leave management and tracking",
     "authors": [
         {
-            "name": "Aureus ERP",
-            "email": "support@aureuserp.in"
+            "name": "ZenyDesk ERP",
+            "email": "contato@zenydesk.com"
         }
     ],
     "extra": {
@@ -12,7 +12,7 @@
             "providers": [
                 "Webkul\\TimeOff\\TimeOffServiceProvider"
             ],
-            "aliases": {}
+            "aliases": []
         }
     },
     "autoload": {

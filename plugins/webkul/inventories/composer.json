@@ -3,8 +3,8 @@
     "description": "Inventory and warehouse management",
     "authors": [
         {
-            "name": "Jitendra Singh",
-            "email": "jitendra@webkul.in"
+            "name": "ZenyDesk ERP",
+            "email": "contato@zenydesk.com"
         }
     ],
     "extra": {
@@ -12,7 +12,7 @@
             "providers": [
                 "Webkul\\Inventory\\InventoryServiceProvider"
             ],
-            "aliases": {}
+            "aliases": []
         }
     },
     "autoload": {

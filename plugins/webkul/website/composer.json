@@ -3,8 +3,8 @@
     "description": "Website for customer",
     "authors": [
         {
-            "name": "Aureus ERP",
-            "email": "support@aureuserp.in"
+            "name": "ZenyDesk ERP",
+            "email": "contato@zenydesk.com"
         }
     ],
     "extra": {
@@ -12,7 +12,7 @@
             "providers": [
                 "Webkul\\Website\\WebsiteServiceProvider"
             ],
-            "aliases": {}
+            "aliases": []
         }
     },
     "autoload": {

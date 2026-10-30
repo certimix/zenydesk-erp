@@ -3,8 +3,8 @@
     "description": "Point of sale terminal, sessions and orders",
     "authors": [
         {
-            "name": "Aureus ERP",
-            "email": "support@aureuserp.in"
+            "name": "ZenyDesk ERP",
+            "email": "contato@zenydesk.com"
         }
     ],
     "extra": {
@@ -12,7 +12,7 @@
             "providers": [
                 "Webkul\\PointOfSale\\PointOfSaleServiceProvider"
             ],
-            "aliases": {}
+            "aliases": []
         }
     },
     "autoload": {

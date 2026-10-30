@@ -7,7 +7,7 @@ return [
 
     'title'      => 'Help',
     'heading'    => 'Help & Resources',
-    'subheading' => 'Everything you need to get the most out of AureusERP.',
+    'subheading' => 'Everything you need to get the most out of ZenyDesk ERP.',
 
     'services' => [
         'group' => 'Services',
@@ -36,7 +36,7 @@ return [
 
         'extensions' => [
             'title'       => 'Modules',
-            'description' => 'Browse official and community add-ons to extend AureusERP with new modules and features.',
+            'description' => 'Browse official and community add-ons to extend ZenyDesk ERP with new modules and features.',
             'button'      => 'Browse Modules',
         ],
 

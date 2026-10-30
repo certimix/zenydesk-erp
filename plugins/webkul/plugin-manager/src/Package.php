@@ -152,7 +152,7 @@ class Package extends BasePackage
         $this->plugin = Plugin::updateOrCreate([
             'name' => $this->name,
         ], [
-            'author'         => $composerData['authors'][0]['name'] ?? null,
+            'author'         => $composerData['authors'][0]['name'] ?? 'ZenyDesk ERP',
             'summary'        => $composerData['description'] ?? null,
             'description'    => $composerData['description'] ?? null,
             'latest_version' => $this->version ?? null,

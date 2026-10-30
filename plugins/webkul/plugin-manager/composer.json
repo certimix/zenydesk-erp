@@ -3,8 +3,8 @@
     "description": "Plugin Manager for Aureus ERP",
     "authors": [
         {
-            "name": "Aureus ERP",
-            "email": "support@aureuserp.in"
+            "name": "ZenyDesk ERP",
+            "email": "contato@zenydesk.com"
         }
     ],
     "extra": {
@@ -12,7 +12,7 @@
             "providers": [
                 "Webkul\\PluginManager\\PluginManagerServiceProvider"
             ],
-            "aliases": {}
+            "aliases": []
         }
     },
     "autoload": {
